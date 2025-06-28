@@ -25,7 +25,8 @@ struct HomeView: View {
                 "bannerImage6"
             ])
             CategoryListView()
-                .padding(.top, 16)            
+                .padding(.top, 16)
+                       
         }
         .overlay(alignment: .top) {
             VStack(spacing: 0) {
