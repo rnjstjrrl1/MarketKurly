@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @State var selectedCategory: CategoryOption = .marketKurly
     var body: some View {
         HStack {
-            HStack {
+            HStack(spacing: 0) {
                 Image(.logo)
                 Spacer()
-                Text("dd")
+                SegmentedPicker(selection: $selectedCategory)
                 Spacer()
                 Image(.notificationIcon)
                 Image(.homeCartIcon)

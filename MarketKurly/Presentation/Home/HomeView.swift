@@ -11,6 +11,7 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             HeaderView()
+                .opacity(0)
         }
         .overlay(alignment: .top) {
             HeaderView()
