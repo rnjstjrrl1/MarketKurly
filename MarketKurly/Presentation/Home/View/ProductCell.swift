@@ -16,7 +16,7 @@ struct ProductCell: View {
                 .frame(maxWidth: 145, minHeight: 188, maxHeight: 188)
                 .cornerRadius(8)
             
-            Text("담기")
+            AddToCartButton()
                 .padding(.top, 6)
             
             Text(prodcut.productName)

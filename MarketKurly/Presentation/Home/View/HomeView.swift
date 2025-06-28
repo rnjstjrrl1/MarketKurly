@@ -36,7 +36,7 @@ struct HomeView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text("👑 도기워커님을 위해 엄선했어요")
-                        .font(.system(size: 16, weight: .medium))
+                        .font(.system(size: 16, weight: .bold))
                         .foregroundStyle(.gray8)
                     Spacer()
                     Text("전체보기")
