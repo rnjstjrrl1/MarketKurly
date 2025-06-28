@@ -10,9 +10,33 @@
 		EE8EAFE42E0FCDE800608481 /* MarketKurly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EE8EB0052E0FCF8000608481 /* Exceptions for "MarketKurly" folder in "MarketKurly" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Global/UIComponents/.gitkeep,
+			);
+			target = EE8EAFE32E0FCDE800608481 /* MarketKurly */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		EE8EB0062E0FCF8000608481 /* Exceptions for "MarketKurly" folder in "Compile Sources" phase from "MarketKurly" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = EE8EAFE02E0FCDE800608481 /* Sources */;
+			membershipExceptions = (
+				Global/UIComponents/.gitkeep,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EE8EAFE62E0FCDE800608481 /* MarketKurly */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EE8EB0052E0FCF8000608481 /* Exceptions for "MarketKurly" folder in "MarketKurly" target */,
+				EE8EB0062E0FCF8000608481 /* Exceptions for "MarketKurly" folder in "Compile Sources" phase from "MarketKurly" target */,
+			);
 			path = MarketKurly;
 			sourceTree = "<group>";
 		};
