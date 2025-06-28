@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ProductLikeButton: View {
     var body: some View {
-        Text("Hello, World!")
+        Image(.heartIcon)
+            .padding(11)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.gray3, lineWidth: 1)
+            )
     }
 }
 

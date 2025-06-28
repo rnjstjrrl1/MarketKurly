@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @StateObject var viewModel: ProductDetailViewModel
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
             HStack {
                 Button {
-                    
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(.backButtonIcon)
                 }
@@ -47,7 +48,8 @@ struct ProductDetailView: View {
         }
         .navigationBarHidden(true)
         .overlay(alignment: .bottom) {
-            HStack {
+            HStack(spacing: 8) {
+                ProductLikeButton()
                 MainButton(title: "구매하기")
             }
             .padding(.horizontal, 16)
