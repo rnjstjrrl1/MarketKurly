@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var selectedMenu: MenuListOption = .kurlyRecomend
     var body: some View {
         ScrollView {
-            HeaderView()
-                .opacity(0)
+            VStack(spacing: 0) {
+                HeaderView()
+                MenuList(selection: $selectedMenu)
+            }
+            .opacity(0)
         }
         .overlay(alignment: .top) {
-            HeaderView()
+            VStack(spacing: 0) {
+                HeaderView()
+                MenuList(selection: $selectedMenu)
+            }
         }
     }
 }
