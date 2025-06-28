@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductCell: View {
     let prodcut: Product
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Image(prodcut.imageName)
@@ -39,7 +40,7 @@ struct ProductCell: View {
                     .foregroundStyle(.gray8)
             }
         }
-        .frame(maxWidth: 145)
+        .frame(maxWidth: 145)       
     }
 }
 
