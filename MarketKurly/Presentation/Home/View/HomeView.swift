@@ -60,7 +60,7 @@ struct HomeView: View {
             .navigationDestination(for: Route.self) { path in
                 switch path  {
                 case let .productDetail(product):
-                    ProductDetailView()
+                    ProductDetailView(viewModel: ProductDetailViewModel(product: product))
                 }
             }
         }
