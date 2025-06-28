@@ -16,6 +16,14 @@ struct HomeView: View {
                 MenuList(selection: $selectedMenu)
             }
             .opacity(0)
+            ImagePageView(imageNames: [
+                "bannerImage1",
+                "bannerImage2",
+                "bannerImage3",
+                "bannerImage4",
+                "bannerImage5",
+                "bannerImage6"
+            ])
         }
         .overlay(alignment: .top) {
             VStack(spacing: 0) {
