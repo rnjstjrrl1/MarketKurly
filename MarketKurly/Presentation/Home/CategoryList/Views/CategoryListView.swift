@@ -26,13 +26,7 @@ struct CategoryListView: View {
     var body: some View {
         LazyVGrid(columns: columns) {
             ForEach(categories) { category in
-                VStack {
-                    category.image
-                    Text(category.title)
-                        .font(.system(size: 12, weight: .regular))
-                        .foregroundStyle(.gray5)
-                        .lineLimit(1)
-                }
+               CategoryCell(category: category)
             }
         }
         .padding(.horizontal, 14)
