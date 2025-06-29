@@ -24,19 +24,10 @@ struct HomeView: View {
                     .padding(.top, 16)
                 
                 ListSectionHeader(title: "👑 도기워커님을 위해 엄선했어요", subTitle: "찜해 놓은 그 상품, 지금 빅세일로 저렴하게!")
-                .padding(.top, 26)
+                    .padding(.top, 26)
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 7) {
-                        ForEach(viewModel.productList, id: \.self) { product in
-                            ProductCell(prodcut: product)
-                                .onTapGesture {
-                                    viewModel.navigateToProductDetail(product)
-                                }
-                        }
-                    }
-                }
-                .padding(.leading, 14)
+                ProductListView(viewModel: ProductListViewModel())
+                    .padding(.leading, 14)
             }
             .overlay(alignment: .top) {
                 VStack(spacing: 0) {
