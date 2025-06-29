@@ -22,21 +22,8 @@ struct HomeView: View {
                 ImagePageView(imageNames: viewModel.bannerImages)
                 CategoryListView(viewModel: CategoryListViewModel())
                     .padding(.top, 16)
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("👑 도기워커님을 위해 엄선했어요")
-                            .font(.system(size: 16, weight: .bold))
-                            .foregroundStyle(.gray8)
-                        Spacer()
-                        Text("전체보기")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundStyle(.main)
-                    }
-                    Text("찜해 놓은 그 상품, 지금 빅세일로 저렴하게!")
-                        .font(.system(size: 14))
-                        .foregroundStyle(.gray3)
-                }
-                .padding(.horizontal, 14)
+                
+                ListSectionHeader(title: "👑 도기워커님을 위해 엄선했어요", subTitle: "찜해 놓은 그 상품, 지금 빅세일로 저렴하게!")
                 .padding(.top, 26)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
