@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductListView: View {
     var viewModel: ProductListViewModel
+    var action: ((Product)->())?
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -16,7 +17,7 @@ struct ProductListView: View {
                 ForEach(viewModel.productList, id: \.self) { product in
                     ProductCell(prodcut: product)
                         .onTapGesture {
-//                            viewModel.navigateToProductDetail(product)
+                            action?(product)
                         }
                 }
             }

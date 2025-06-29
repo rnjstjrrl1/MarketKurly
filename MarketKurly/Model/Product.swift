@@ -10,6 +10,7 @@ struct Product: Hashable {
     let productName: String
     let originPrice: Int
     let discountRate: Int
+    var isLike: Bool
     
     var discountPrice: Int {
         return originPrice - (originPrice * discountRate / 100)

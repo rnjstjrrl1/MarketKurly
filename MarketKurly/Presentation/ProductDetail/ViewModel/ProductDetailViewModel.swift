@@ -8,9 +8,13 @@
 import SwiftUI
 
 final class ProductDetailViewModel: ObservableObject {
-    let product: Product
+    @Published var product: Product
     
     init(product: Product) {
         self.product = product
+    }
+    
+    func toggleLikeStatus() {
+        product.isLike.toggle()
     }
 }

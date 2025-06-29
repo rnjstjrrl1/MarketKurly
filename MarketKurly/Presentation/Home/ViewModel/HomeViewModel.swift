@@ -12,8 +12,13 @@ enum Route: Hashable {
 }
 
 final class HomeViewModel: ObservableObject {
+    /// 화면이동 경로 관리
     @Published var path: [Route] = []
+    /// 현재 선택한 메뉴
     @Published var selectedMenu: MenuListOption = .kurlyRecomend
+    /// 현재 선택된 카테고리
+    @Published var selectedCategory: CategoryOption = .marketKurly
+    /// 배너이미지 목록
     @Published var bannerImages: [String] = [ "bannerImage1",
                                               "bannerImage2",
                                               "bannerImage3",

@@ -25,7 +25,7 @@ struct ImagePageView: View {
                     .tabViewStyle(.page(indexDisplayMode: .never))
             )
             .overlay(alignment: .bottomTrailing) {
-                Text("\(selectedIndex)/\(imageNames.count)")
+                Text("\(selectedIndex + 1)/\(imageNames.count)")
                     .font(.system(size: 12, weight: .regular))
                     .foregroundStyle(.white)
                     .padding(.vertical, 2)

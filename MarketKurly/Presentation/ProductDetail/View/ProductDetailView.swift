@@ -49,7 +49,10 @@ struct ProductDetailView: View {
         .navigationBarHidden(true)
         .overlay(alignment: .bottom) {
             HStack(spacing: 8) {
-                ProductLikeButton()
+                ProductLikeButton(isLike: viewModel.product.isLike)
+                    .onTapGesture {
+                        viewModel.toggleLikeStatus()
+                    }
                 MainButton(title: "구매하기")
             }
             .padding(.horizontal, 16)

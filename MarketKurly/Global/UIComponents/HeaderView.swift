@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
-    @State var selectedCategory: CategoryOption = .marketKurly
+    @Binding var selectedCategory: CategoryOption
     var body: some View {
         HStack {
             HStack(spacing: 0) {
@@ -27,5 +27,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(selectedCategory: .constant(.marketKurly))
 }

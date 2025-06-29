@@ -8,16 +8,32 @@
 import SwiftUI
 
 struct ProductLikeButton: View {
+    let isLike: Bool
+    @State var scale = 1.0
     var body: some View {
-        Image(.heartIcon)
+        Image(isLike ? .heartFillIcon : .heartIcon)
+            .scaleEffect(scale)
             .padding(11)
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.gray3, lineWidth: 1)
             )
+            .onChange(of: isLike) { _ in
+                if !isLike {
+                    withAnimation(.spring()) {
+                        scale = 1.1
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        withAnimation(.spring()) {
+                            scale = 1.0
+                        }
+                    }
+                }
+            }
     }
 }
 
 #Preview {
-    ProductLikeButton()
+    ProductLikeButton(isLike: false)
 }
