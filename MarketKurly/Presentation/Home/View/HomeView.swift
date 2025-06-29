@@ -20,7 +20,7 @@ struct HomeView: View {
                 }
                 .opacity(0)
                 ImagePageView(imageNames: viewModel.bannerImages)
-                CategoryListView()
+                CategoryListView(viewModel: CategoryListViewModel())
                     .padding(.top, 16)
                 VStack(alignment: .leading) {
                     HStack {
