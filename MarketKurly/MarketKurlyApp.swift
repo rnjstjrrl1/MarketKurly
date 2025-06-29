@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MarketKurlyApp: App {
+    let container = DIContainer()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(container.homeViewModel)
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductListView: View {
-    var viewModel: ProductListViewModel
+    @ObservedObject var viewModel: ProductListViewModel
     var action: ((Product)->())?
     
     var body: some View {

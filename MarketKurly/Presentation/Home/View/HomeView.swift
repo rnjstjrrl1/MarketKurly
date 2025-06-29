@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    @EnvironmentObject var viewModel: HomeViewModel
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
@@ -29,7 +29,7 @@ struct HomeView: View {
                 )
                 .padding(.top, 26)
 
-                ProductListView(viewModel: ProductListViewModel()) { product in
+                ProductListView(viewModel: viewModel.productListViewModel) { product in
                     viewModel.navigateToProductDetail(product)
                 }
                 .padding(.leading, 14)
@@ -43,6 +43,9 @@ struct HomeView: View {
                     ProductDetailView(viewModel: ProductDetailViewModel(product: product))
                 }
             }
+            .onAppear {
+                viewModel.productListViewModel.fetchProducts()
+            }
         }
     }
     
@@ -55,6 +58,6 @@ struct HomeView: View {
 }
 
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}

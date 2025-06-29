@@ -12,6 +12,7 @@ enum Route: Hashable {
 }
 
 final class HomeViewModel: ObservableObject {
+    @Published var productListViewModel: ProductListViewModel    
     /// 화면이동 경로 관리
     @Published var path: [Route] = []
     /// 현재 선택한 메뉴
@@ -25,6 +26,10 @@ final class HomeViewModel: ObservableObject {
                                               "bannerImage4",
                                               "bannerImage5",
                                               "bannerImage6"]
+    
+    init(productListViewModel: ProductListViewModel) {
+        self.productListViewModel = productListViewModel
+    }
     
     func navigateToProductDetail(_ product: Product) {
         path.append(.productDetail(product))
